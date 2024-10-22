@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Newuser</title>
+<script> 
+function validate()
+{ 
+     var firstname = document.form.firstname.value;
+     var lastname = document.form.lastname.value;
+     var email = document.form.email.value;
+    
+     var password = document.form.password.value;
+     var conpassword= document.form.conpassword.value;
+     
+     if (firstname==null || firstname=="")
+     { 
+     alert("FirstName can't be blank"); 
+     return false; 
+     }
+     else if (lastname==null || lastname=="")
+     { 
+     alert("lastName can't be blank"); 
+     return false; 
+     }
+     else if (email==null || email=="")
+     { 
+     alert("Email can't be blank"); 
+     return false; 
+     }
+    
+     else if(password.length<6)
+     { 
+     alert("Password must be at least 6 characters long."); 
+     return false; 
+     } 
+     else if (password!=conpassword)
+     { 
+     alert("Confirm Password should match with the Password"); 
+     return false; 
+     } 
+ } 
+</script> 
+</head>
+<style>
+body
+{
+ 
+	
+	background-image:url("https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	
+	
+
+}
+</style>
+<body>
+<div style="text-align: center">
+        <h1> NewUserLogin</h1>
+    <form name="form" action="RegisterServlet" method="post" onsubmit="return validate()">
+        <table align="center">
+         <tr>
+         <td>First Name</td>
+         <td><input type="text" name="firstname" /></td>
+         </tr><br>
+         <tr>
+         <td>Last Name</td>
+         <td><input type="text" name="lastname" /></td>
+         </tr><br>
+         <tr>
+         <td>Email</td>
+         <td><input type="text" name="email" /></td>
+         </tr>
+         <tr>
+        
+         <tr>
+         <td>Password</td>
+         <td><input type="password" name="password" /></td>
+         </tr>
+         <tr>
+         <td>Confirm Password</td>
+         <td><input type="password" name="conpassword" /></td>
+         </tr>
+        </table><br>
+         <tr>
+      
+         <td><input type="submit"</input><input
+         type="reset" value="Reset"></input></td>
+         <center><a href="form.html"><button class="navitem" >Form Page here </button></a></center> <br><br>
+
+         </tr>
+        
+    </form>
+</body>
+</html>

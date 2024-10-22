@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>AdminLogin</title>
+<script> 
+function validate()
+{ 
+     var email = document.form.email.value;
+    
+     var password = document.form.password.value;
+     var conpassword= document.form.conpassword.value;
+     
+      if (email==null || email=="")
+     { 
+     alert("Email can't be blank"); 
+     return false; 
+     }
+    
+     else if(password.length<6)
+     { 
+     alert("Password must be at least 6 characters long."); 
+     return false; 
+     } 
+     else if (password!=conpassword)
+     { 
+     alert("Confirm Password should match with the Password"); 
+     return false; 
+     } 
+ } 
+</script> 
+</head>
+<style>
+body
+{
+ 
+	
+	
+		background-image:url("https://thumbs.dreamstime.com/b/people-booking-hotel-search-reservation-tiny-character-concept-vector-illustration-suitable-web-landing-page-167742712.jpg");
+background-size:cover;
+	background-repeat: no-repeat;
+	
+
+}
+</style>
+<body>
+<div style="text-align: center">
+        <h1> Login</h1>
+    <form name="form" action="LoginServlet" method="post" onsubmit="return validate()">
+        <table align="center">
+         
+         <tr>
+         <td>Email</td>
+         <td><input type="text" name="email" size="30"/></td>
+         </tr>
+         <tr>
+        
+         <tr>
+         <td>Password</td>
+         <td><input type="password" name="password" size="30"/></td>
+         </tr>
+         <tr>
+         <td>Confirm Password</td>
+         <td><input type="password" name="conpassword" size="30"/></td>
+         </tr>
+        </table><br>
+         <tr>
+      
+         <td><input type="submit" value="Login" algin="center"></input><input
+         type="reset" value="Reset"></input></td>
+         </tr>
+       
+    </form>
+<br/><br/>
+<center><a href="Newuser.html"><button class="navitem" >NewUser Login here </button></a></center> <br><br>
+</body>
+</html>
